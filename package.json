@@ -6,8 +6,8 @@
 	"license": "Apache-2.0",
 	"scripts": {
 		"dev": "vite --force",
-		"build": "NODE_OPTIONS=--max-old-space-size=4096 vite build",
-		"build:docker": "NODE_OPTIONS=--max-old-space-size=4096 vite build --outDir ./docker/dist/",
+		"build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vite build",
+		"build:docker": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vite build --outDir ./docker/dist/",
 		"lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
 		"prettier": "prettier --write ."
 	},
@@ -52,6 +52,7 @@
 		"@vitejs/plugin-vue": "^4.0.0",
 		"@vue/compiler-sfc": "^3.2.47",
 		"consola": "^2.15.3",
+		"cross-env": "7.0.3",
 		"eslint": "^8.34.0",
 		"eslint-plugin-vue": "^9.9.0",
 		"pinia-plugin-persist": "^1.0.0",
