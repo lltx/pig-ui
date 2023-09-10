@@ -1,4 +1,4 @@
-name: Build and Test
+name: build
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - dev
 
 jobs:
-  build_and_test:
+  task:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
